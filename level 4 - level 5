@@ -1,0 +1,42 @@
+ OverTheWire Bandit – Level 4 → Level 5
+
+## Level Goal
+The password for the next level is stored in the only human-readable file inside the `inhere` directory.
+
+## Commands Used
+- ls
+- cd
+- file
+- cat
+
+## Steps
+1. Login to the server as `bandit4` using SSH.
+2. Move into the `inhere` directory:
+   ```bash
+   cd inhere
+List the files:
+
+bash
+Copy code
+ls
+Identify the human-readable file:
+
+bash
+Copy code
+file ./*
+Read the human-readable file:
+
+bash
+Copy code
+cat ./-file07
+(filename may vary, choose the file marked as ASCII text)
+
+Result
+Password for bandit5 obtained successfully.
+
+What I Learned
+Using the file command to identify file types
+
+Finding human-readable files
+
+Analyzing files efficiently in Linux
