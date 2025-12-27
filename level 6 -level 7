@@ -1,0 +1,33 @@
+OverTheWire Bandit – Level 6 → Level 7
+
+## Level Goal
+The password for the next level is stored somewhere on the server and has the following properties:
+- Owned by user `bandit7`
+- Owned by group `bandit6`
+- Exactly 33 bytes in size
+
+## Commands Used
+- find
+- cat
+
+## Steps
+1. Login to the server as `bandit6` using SSH.
+2. Search for the file with the required ownership and size:
+   ```bash
+   find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null
+Read the file found:
+
+bash
+Copy code
+cat <filename>
+Note down the password displayed.
+
+Result
+Password for bandit7 obtained successfully.
+
+What I Learned
+Searching files using user and group ownership
+
+Filtering files by exact size
+
+Suppressing permission errors using 2>/dev/null
