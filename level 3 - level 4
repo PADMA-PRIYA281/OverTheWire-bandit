@@ -1,0 +1,41 @@
+OverTheWire Bandit – Level 3 → Level 4
+
+## Level Goal
+The password for the next level is stored in a hidden file inside the `inhere` directory.
+
+## Commands Used
+- ls
+- cd
+- cat
+
+## Steps
+1. Login to the server as `bandit3` using SSH.
+2. List files and directories:
+   ```bash
+   ls
+Move into the inhere directory:
+
+bash
+Copy code
+cd inhere
+List all files including hidden ones:
+
+bash
+Copy code
+ls -a
+Read the hidden file:
+
+bash
+Copy code
+cat .hidden
+Note down the password displayed.
+
+Result
+Password for bandit4 obtained successfully.
+
+What I Learned
+Understanding hidden files in Linux
+
+Using ls -a to view hidden files
+
+Navigating directories effectively
