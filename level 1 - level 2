@@ -1,0 +1,24 @@
+OverTheWire Bandit – Level 1 → Level 2
+
+Level Goal
+The password for the next level is stored in a file called `-` located in the home directory.
+
+Commands Used
+- ls
+- cat
+
+Steps
+1. Login to the server as `bandit1` using SSH.
+2. List the files in the home directory:
+   ls
+3.Since the filename starts with a dash (-), read it using:
+  cat ./-
+4.Note down the password displayed.
+
+Result
+Password for bandit2 obtained successfully.
+
+What I Learned
+Handling filenames that start with special characters
+Using ./ to reference files
+Better understanding of Linux file handling
