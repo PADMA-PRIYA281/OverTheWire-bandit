@@ -1,0 +1,46 @@
+OverTheWire Bandit – Level 5 → Level 6
+
+## Level Goal
+The password for the next level is stored in a file somewhere under the `inhere` directory and has the following properties:
+- Human-readable
+- Exactly 1033 bytes in size
+- Not executable
+
+## Commands Used
+- ls
+- cd
+- find
+- file
+- cat
+
+## Steps
+1. Login to the server as `bandit5` using SSH.
+2. Move into the `inhere` directory:
+   ```bash
+   cd inhere
+Search for the file with required properties:
+
+bash
+Copy code
+find . -type f -size 1033c ! -executable
+Identify the human-readable file:
+
+bash
+Copy code
+file <filename>
+Read the file:
+
+bash
+Copy code
+cat <filename>
+Note down the password displayed.
+
+Result
+Password for bandit6 obtained successfully.
+
+What I Learned
+Using find with size and permission filters
+
+Searching files efficiently in Linux
+
+Understanding file attributes
