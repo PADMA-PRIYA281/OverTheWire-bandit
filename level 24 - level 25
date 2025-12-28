@@ -1,0 +1,34 @@
+OverTheWire Bandit – Level 24 → Level 25 Walkthrough
+
+Level Goal
+A daemon is listening on port 30002. To get the password for bandit25, you need to provide:
+The password for bandit24
+A secret 4-digit numeric PIN code
+There is no direct way to retrieve the PIN except by brute forcing all 10,000 combinations (0000 to 9999). The catch is you do not need to reconnect to the daemon for each guess — you can keep the connection open and try all PINs sequentially.
+
+Commands & Tools Used
+Python (socket programming)
+Basic shell commands (ssh)
+
+Step-by-Step Solution
+Login as bandit24 using SSH.
+Connect to the daemon on port 30002 (on the Bandit server) using a Python script or netcat.
+Send the Bandit24 password once to authenticate.
+Brute force all 4-digit PIN combinations (0000 to 9999) by sending each PIN guess sequentially without closing the connection.
+Monitor the daemon’s response after each PIN guess to detect the correct PIN.
+Once the correct PIN is found, the daemon returns the password for bandit25.
+
+Sample Approach (Python Script)
+Create a persistent socket connection to the daemon.
+Send Bandit24 password.
+Loop through PINs from 0000 to 9999, sending each guess.
+Break the loop and capture the bandit25 password once the daemon responds positively.
+
+Result
+The password for bandit25 is obtained successfully by brute forcing the 4-digit PIN while keeping the connection alive.
+
+What I Learned
+How to interact with TCP daemons using socket programming
+Techniques for brute forcing with persistent network connections
+The importance of optimizing connections to avoid overhead (no need to reconnect every time)
+Practical application of automation in security challenges
