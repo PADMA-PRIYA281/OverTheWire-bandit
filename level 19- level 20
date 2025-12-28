@@ -1,0 +1,29 @@
+OverTheWire Bandit – Level 19 → Level 20
+
+Level Goal
+To gain access to the next level, a **setuid binary** is provided in the home directory.  
+This binary must be executed correctly to read the password stored in `/etc/bandit_pass`.
+
+ Commands Used
+- ls
+- ./binary
+- cat
+
+ Steps
+1. Login as `bandit19` using SSH.
+2. List the files in the home directory:
+   ls
+3.Execute the setuid binary to understand its usage:
+ ./bandit20-do
+4.Use the binary to read the password file:
+ ./bandit20-do cat /etc/bandit_pass/bandit20
+5.Note down the displayed password.
+6.Use this password to log in as bandit20.
+
+Result
+Successfully retrieved the password for bandit20 using a setuid binary.
+
+What I Learned
+Understanding how setuid binaries work
+Executing programs with elevated privileges
+Practical privilege escalation concepts in Linux
