@@ -1,0 +1,24 @@
+OverTheWire Bandit – Level 8 → Level 9
+
+Level Goal
+The password for the next level is stored in the file `data.txt` and is the **only line of text that occurs only once**.
+
+Commands Used
+- sort
+- uniq
+
+ Steps
+1. Login to the server as `bandit8` using SSH.
+2. Locate the file `data.txt`.
+3. Sort the file and find the unique line:
+   ```bash
+   sort data.txt | uniq -u
+The output shown is the password for the next level.
+
+Result
+Password for bandit9 obtained successfully.
+
+What I Learned
+Using sort to organize file contents
+Finding unique lines with uniq -u
+Combining commands using pipes (|) for efficient processing
