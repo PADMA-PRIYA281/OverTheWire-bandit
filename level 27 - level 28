@@ -1,0 +1,32 @@
+OverTheWire Bandit – Level 27 → Level 28 
+
+Level Goal
+A git repository is hosted at:
+ssh://bandit27-git@bandit.labs.overthewire.org/home/bandit27-git/repo
+using port 2220.
+The password for user bandit27-git is the same as the password for bandit27.
+
+Commands Used
+git clone
+ls
+cat
+
+Steps
+SSH into the Bandit server as usual.
+Use the bandit27 password to SSH into the git user:
+   ssh bandit27-git@bandit.labs.overthewire.org -p 2220
+Clone the repository located at /home/bandit27-git/repo:
+   git clone ssh://bandit27-git@bandit.labs.overthewire.org:2220/home/bandit27-git/repo
+Change into the cloned repository directory:
+   cd repo
+List the files and inspect their contents to find the password for bandit28:
+  ls -la
+  cat <file-containing-password>
+
+Result
+The password for bandit28 was found inside the cloned git repository.
+
+What I Learned
+How to connect to remote git repositories over SSH on non-standard ports.
+Basic git commands to clone and explore repositories.
+The importance of exploring hidden or unusual files in security challenges.
