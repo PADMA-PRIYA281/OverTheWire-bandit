@@ -1,0 +1,28 @@
+OverTheWire Bandit – Level 18 → Level 19
+
+ Level Goal
+The password for the next level is stored in a file called `readme` in the home directory.  
+However, the `.bashrc` file has been modified to immediately log you out when you try to connect using SSH.
+
+ Commands Used
+- ssh
+- ls
+- cat
+
+ Steps
+1. Connect to `bandit18` while bypassing the interactive shell:
+   ssh bandit18@localhost -p 2220 bash
+2.List files in the home directory:
+ls
+3.Read the readme file:
+cat readme
+4.Note down the displayed password.
+5.Use this password to log in as bandit19.
+
+Result
+Successfully retrieved the password for bandit19 by bypassing the forced logout behavior.
+
+What I Learned
+Understanding how shell startup files like .bashrc work
+Bypassing restricted shells using SSH command execution
+Reading files without starting a full interactive session
