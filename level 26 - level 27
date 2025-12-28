@@ -1,0 +1,24 @@
+OverTheWire Bandit – Level 26 → Level 27 Walkthrough
+
+Level Goal
+to quickly locate and grab the password for bandit27.
+
+Commands  Need
+ls
+
+Step-by-Step Solution
+Login as bandit26 using SSH.
+Explore the current directory or home directory to find any files that might contain the password:
+  ls -la
+Look for files such as README, password, or any unusual files that could contain the password.
+Use cat or other commands to read the contents of the likely file:
+  cat <filename>
+The password for bandit27 should be revealed.
+
+Result
+Successfully found and read the password for bandit27.
+
+What I Learned
+How to quickly explore directories for hidden or important files
+Basic use of ls and cat commands to read files
+The importance of file permissions and hidden files in security challenges
