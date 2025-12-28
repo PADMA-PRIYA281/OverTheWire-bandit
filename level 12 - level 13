@@ -1,0 +1,39 @@
+ OverTheWire Bandit – Level 12 → Level 13
+
+ Level Goal
+The password for the next level is stored in the file `data.txt`, which is a hexdump of a file that has been compressed multiple times.
+
+Commands Used
+- xxd
+- file
+- gzip
+- bzip2
+- tar
+- strings
+- mkdir
+- cp
+- mv
+
+ Steps
+1. Login as `bandit12` using SSH.
+2. Create a temporary working directory:
+   ```bash
+   mkdir /tmp/bandit12_work
+   cd /tmp/bandit12_work
+3.Copy the data file:
+cp ~/data.txt .
+4.Convert hexdump back to binary:
+xxd -r data.txt data
+5.Check the file type and decompress step by step using file, gzip, bzip2, and tar.
+6.After extracting all layers, use:
+strings finalfile
+7.The output contains the password for the next level.
+
+Result
+Password for bandit13 obtained successfully.
+
+What I Learned
+Converting hexdump to binary using xxd
+Identifying file types with file
+Handling multiple compression formats
+Importance of step-by-step analysis in Linux
