@@ -1,0 +1,34 @@
+OverTheWire Bandit – Level 22 → Level 23
+
+ Level Goal
+A program is running automatically at regular intervals using **cron**.  
+The cron configuration is located in `/etc/cron.d/`.  
+The task is to analyze the script being executed and determine how it generates the password for the next level.
+
+ Commands Used
+- ls
+- cat
+- bash
+
+Steps
+1. Login as `bandit22` using SSH.
+2. List cron configuration files:
+   ls /etc/cron.d/
+3.View the cron job related to bandit23:
+  cat /etc/cron.d/cronjob_bandit23
+4.Identify the script being executed and open it:
+  cat /usr/bin/cronjob_bandit23.sh
+5.Analyze the script logic to understand how the password file name is generated.
+6.Use the same logic manually to locate the password file in /tmp.
+7.Read the generated password file:
+  cat /tmp/<generated_filename>
+
+Result
+Password for bandit23 obtained successfully by analyzing a cron-executed script.
+
+What I Learned
+Reading and understanding shell scripts written by others
+Analyzing cron jobs and their execution flow
+Understanding how scripts dynamically generate file names
+Importance of automation analysis in system security
+
