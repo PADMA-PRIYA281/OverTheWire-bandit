@@ -1,0 +1,26 @@
+ OverTheWire Bandit – Level 15 → Level 16
+
+ Level Goal
+The password for the next level can be retrieved by submitting the password of the current level to port **30001** on **localhost** using **SSL/TLS encryption**.
+
+ Commands Used
+- ssh
+- openssl
+- s_client
+
+ Steps
+1. Login as `bandit15` using SSH.
+2. Read the current level password:
+   cat /etc/bandit_pass/bandit15
+3.Connect securely to port 30001 using OpenSSL:
+openssl s_client -connect localhost:30001
+4.Paste the password when prompted and press Enter.
+5.The server returns the password for the next level.
+
+Result
+Password for bandit16 obtained successfully.
+
+What I Learned
+Difference between encrypted and unencrypted connections
+Using OpenSSL for SSL/TLS communication
+Secure authentication using encrypted ports
