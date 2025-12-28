@@ -1,0 +1,27 @@
+ OverTheWire Bandit – Level 9 → Level 10
+
+ Level Goal
+The password for the next level is stored in the file `data.txt` in one of the few **human-readable strings**, preceded by several `=` characters.
+
+ Commands Used
+- strings
+- grep
+
+## Steps
+1. Login to the server as `bandit9` using SSH.
+2. Extract readable strings from the file:
+   ```bash
+   strings data.txt
+3.Filter the line containing = characters:
+
+strings data.txt | grep "="
+
+4.The readable string next to = symbols is the password.
+
+Result
+Password for bandit10 obtained successfully.
+
+What I Learned
+Extracting readable text from binary files using strings
+Filtering specific patterns using grep
+Combining commands with pipes for efficient analysis
