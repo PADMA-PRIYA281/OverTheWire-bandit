@@ -1,0 +1,33 @@
+OverTheWire Bandit – Level 10 → Level 11
+
+ Level Goal
+The password for the next level is stored in the file `data.txt`, which contains **base64 encoded data**.
+
+ Commands Used
+- base64
+- cat
+
+ Steps
+1. Login to the server as `bandit10` using SSH.
+2. View the contents of the file:
+   ```bash
+   cat data.txt
+3.Decode the base64 encoded data:
+base64 -d data.txt
+4.The decoded output is the password for the next level.
+
+Result
+Password for bandit11 obtained successfully.
+
+What I Learned
+Understanding base64 encoding and decoding
+Decoding encoded files using Linux commands
+Handling encoded data in cybersecurity challenges
+
+
+
+
+
+
+
+
