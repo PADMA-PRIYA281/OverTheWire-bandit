@@ -1,0 +1,32 @@
+OverTheWire Bandit – Level 17 → Level 18
+
+Level Goal
+There are two files in the home directory:
+- `passwords.old`
+- `passwords.new`
+The password for the next level is stored in `passwords.new` and is the **only line that differs** between the two files.
+
+ Commands Used
+- ls
+- cat
+- diff
+
+ Steps
+1. Login as `bandit17` using SSH.
+2. List the files in the home directory:
+   ls
+3.View the contents of both files (optional):
+  cat passwords.old
+  cat passwords.new
+4.Compare both files to find the changed line:
+ diff passwords.old passwords.new
+5.Identify the newly added or modified line in passwords.new.
+6.This line is the password for bandit18.
+
+Result
+Successfully identified the password for bandit18 by comparing two files using the diff command.
+
+What I Learned
+Comparing files efficiently using diff
+Identifying changes between file versions
+Understanding real-world use of file comparison in security and system analysis
