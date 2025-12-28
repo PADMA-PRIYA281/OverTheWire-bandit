@@ -1,0 +1,32 @@
+OverTheWire Bandit – Level 20 → Level 21
+
+Level Goal
+A **setuid binary** is provided in the home directory.  
+It connects to `localhost` on a port you specify, reads a line of input, and compares it with the password from the previous level (`bandit20`).  
+If the password is correct, it returns the password for the next level (`bandit21`).
+
+ Commands Used
+- ssh
+- nc
+- cat
+- bash
+
+Steps
+1. Login as `bandit20` using SSH.
+2. Read the current level password:
+  cat /etc/bandit_pass/bandit20
+3.Start a listener on a local port (example: 1234):
+nc -l 1234
+4.In another terminal (or background process), execute the setuid binary and connect it to the same port:
+./suconnect 1234
+5.Paste the bandit20 password into the netcat listener and press Enter.
+6.The binary verifies the password and sends back the password for the next level.
+
+Result
+Successfully retrieved the password for bandit21 using inter-process communication.
+
+What I Learned
+Understanding how setuid binaries interact with network services
+Using netcat for local communication
+Managing multiple terminal sessions and background processes
+Practical client–server interaction concepts
