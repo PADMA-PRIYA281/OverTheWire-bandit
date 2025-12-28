@@ -1,0 +1,23 @@
+OverTheWire Bandit – Level 32 → Level 33
+
+Level Goal
+After all the git challenges, it’s time for another escape! Your goal is to break out of the restricted shell environment and retrieve the password for bandit33.
+
+Commands  Need
+sh
+man
+
+Steps
+Login as bandit32.
+Analyze the current shell environment and restrictions.
+Use sh (the shell command) or explore the manual pages with man to find ways to escape the restricted shell.
+Once you successfully break out to a normal shell, navigate the filesystem to find the password file:
+   cat /etc/bandit_pass/bandit33
+
+Result
+Successfully escaped the restricted environment and retrieved the password for bandit33.
+
+What I Learned
+Techniques to break out of restricted shells using built-in shell commands.
+Using man pages as a resource to understand commands and options.
+The importance of shell environments in security and how to bypass restrictions.
